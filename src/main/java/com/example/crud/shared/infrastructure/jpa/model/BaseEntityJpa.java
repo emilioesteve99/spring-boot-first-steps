@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 import java.util.UUID;
 
 public abstract class BaseEntityJpa {
-    @Id
-    @Column(name = "id")
-    public UUID id;
+  @Id
+  @Column(name = "id")
+  public UUID id;
 }
