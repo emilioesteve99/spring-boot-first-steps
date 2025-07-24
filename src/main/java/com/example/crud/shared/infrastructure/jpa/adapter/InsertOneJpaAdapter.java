@@ -35,6 +35,7 @@ public class InsertOneJpaAdapter<TCommand extends Command, TModelDB, TModel> imp
     } catch (Exception e) {
       throw new UnknownException(e);
     }
-    return this.entityJpaToEntityConverter.convert(entityJpa);
+    final TModel entity = this.entityJpaToEntityConverter.convert(entityJpa);
+    return entity;
   }
 }
